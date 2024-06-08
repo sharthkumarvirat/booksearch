@@ -55,7 +55,7 @@ function App() {
   } else {
     return (
       <>
-        <BrowserRouter basename='/'>
+        <BrowserRouter basename='/booksearch'>
           <Routes>
             <Route path='/' element={<Home apiData={apiData} pending={pending} addtoFav={addtoFav} setPending={setPending} setSearch={setSearch} />} />
             <Route path='/favourite' element={<Favourite deleteFromFav={deleteFromFav} />} />
