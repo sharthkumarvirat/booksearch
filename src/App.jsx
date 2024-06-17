@@ -11,7 +11,7 @@ function App() {
   const [addFav, setAddFav] = useState([])
   const [search, setSearch] = useState("")
 
-  let url = `https://openlibrary.org/search.json?q=a&limit=10&page=1`
+  let url = `https://openlibrary.org/search.json?q=YOUR_QUERY&limit=10&page=1`
   useEffect(() => {
     if (search !== "") {
       url = `https://openlibrary.org/search.json?q=${search}&limit=10&page=1`
@@ -49,7 +49,7 @@ function App() {
   if (pending) {
     return (
       <div className='flex items-center justify-center w-screen h-screen'>
-        <span className="loading loading-spinner loading-xs h-[5rem] w-[5rem]"></span>
+        <span className="loading loading-spinner h-[5rem] w-[5rem]"></span>
       </div>
     )
   } else {
